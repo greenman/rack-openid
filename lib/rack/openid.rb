@@ -84,6 +84,7 @@ module Rack #:nodoc:
     #   use Rack::OpenID, OpenID::Store::Memcache.new
     def initialize(app, store = nil)
       @app = app
+      puts " ------- current store #{store} ------ "
       @store = store || default_store
     end
 
